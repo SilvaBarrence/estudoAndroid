@@ -7,7 +7,7 @@
     android:gravity="bottom">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/activity_fab_novo_aluno"
+        android:id="@+id/activity_lista_alunos_fab_novo_aluno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -16,10 +16,11 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
         app:backgroundTint="#E91E63"
+        android:src="@drawable/ic_action_novo_aluno"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <ListView
-        android:id="@+id/activity_id_list_name"
+        android:id="@+id/activity_lista_alunos_listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </RelativeLayout>
