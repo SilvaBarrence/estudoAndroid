@@ -6,19 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import br.com.alura.agenda.R;
 import br.com.alura.agenda.dao.AlunoDAO;
 import br.com.alura.agenda.model.Aluno;
 
-public class formularioAlunosActivity extends AppCompatActivity {
+public class FormularioAlunosActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_aluno);
 
+        setTitle("Novo aluno");
         final AlunoDAO dao = new AlunoDAO();
 
         final TextView campoNome = findViewById(R.id.activity_formulario_aluno_nome);
@@ -36,7 +36,7 @@ public class formularioAlunosActivity extends AppCompatActivity {
             Aluno alunoCriado = new Aluno(nome, telefone, email);
             dao.salva(alunoCriado);
 
-            startActivity(new Intent(formularioAlunosActivity.this, listaAlunosActivity.class));
+            finish();
         }
     });
     }
